@@ -1,0 +1,24 @@
+blockquote {
+    border-left:none
+}
+
+p.quotation-mark {
+    margin-top: -50px;
+    font-weight: bold;
+    font-size:100px;
+    color: black;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+p.quote-text {
+    font-size: 2em;
+    margin-left: 15%;
+    margin-top: -85px;
+}
+
+#signOutButton {
+  -webkit-appearance: none;
+  color: #007bff;
+  border: none;
+  background-color: #f8f9fa
+}

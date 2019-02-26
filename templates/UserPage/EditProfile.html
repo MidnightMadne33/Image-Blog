@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="{% url 'HomePage:SignUp' %}" method="post" enctype="multipart/form-data">
+      <!-- {{forms.as_p}} -->
+      <input type="submit" class="btn btn-primary" value="Sumbit">
+  </form>
+{% endblock %}

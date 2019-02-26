@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1>Sign In.</h1>
+    <p>Edit your blogs. View your profile.</p>
+  </div>
+  <form action="{% url 'HomePage:SignIn' %}" method="post">
+      {{forms.as_p}}
+      {% csrf_token %}
+      {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+      {% endif %}
+      <input type="submit" class="btn btn-primary" value="Sign In">
+  </form>
+{% endblock %}
