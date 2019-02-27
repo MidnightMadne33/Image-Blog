@@ -12,8 +12,16 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-# class Blog(models.Model):
-#     Title = models.CharField(max_length=50)
-#     TextContent = models.TextField()
-#     Date = models.DateField(auto_now_add=True)
-#     Author
+    def name(self):
+        return self.user.first_name + self.user.last_name
+
+
+class Blog(models.Model):
+
+    TextContent = models.TextField()
+    ImageContent = models.ImageField(upload_to='UserMedia/User')
+    Date = models.DateField(auto_now_add=True)
+    username = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.Title
